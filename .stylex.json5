@@ -1,0 +1,9 @@
+{
+  input: "./source",
+  output: "./src",
+  styleXBundleName: "stylex_bundle.css",
+  babelPresets: [
+    ["@babel/preset-typescript", { allExtensions: true, isTSX: true }],
+  ],
+  watch: true,
+}
