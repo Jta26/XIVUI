@@ -28,7 +28,7 @@ const styles = stylex.create({
     borderRadius: 30,
     border: "none",
     background:
-      "linear-gradient(180deg, #5B5B5B 0%, #4B4B4B 45%, #373737 55%, #454545 100%)",
+      "linear-gradient(180deg, #636363 0%, #4B4B4B 45%, #373737 55%, #454545 100%)",
     boxShadow: "0px 0px 2px 0px rgba(0,0,0,0.75)",
     filter: {
       default: "none",

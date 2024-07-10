@@ -13,7 +13,7 @@ const styles = stylex.create({
   container: {
     width: "80%",
     minWidth: 400,
-    backgroundColor: "#303030",
+    backgroundColor: "#313131",
     display: "flex",
     padding: 20,
     flexDirection: "column",
