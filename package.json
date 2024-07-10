@@ -6,6 +6,7 @@
     "dev": " next dev",
     "build": " next build",
     "start": "next start",
+    "transform": "stylex --config .stylex.json5",
     "lint": "next lint"
   },
   "dependencies": {
@@ -18,7 +19,6 @@
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@stylexjs/babel-plugin": "^0.7.5",
-    "@stylexjs/cli": "^0.7.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

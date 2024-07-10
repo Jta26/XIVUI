@@ -110,3 +110,7 @@ a {
   font-family: 'meiryo';
   src: url('/fonts/meiryo.ttf');
 }
+
+* {
+  font-family: 'meiryo'
+}

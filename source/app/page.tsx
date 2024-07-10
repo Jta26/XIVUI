@@ -47,9 +47,11 @@ export default function Home() {
         </div>
         <div {...stylex.props(styles.example)}>
           <h3>Card</h3>
-          <XIVCard>
-            <XIVButton label="Card Button" />
-          </XIVCard>
+          <div style={{ height: 400, width: 400 }}>
+            <XIVCard>
+              <XIVButton label="Card Button" />
+            </XIVCard>
+          </div>
         </div>
       </div>
     </main>
