@@ -5,15 +5,14 @@ import * as stylex from "@stylexjs/stylex";
 export enum XIVTextStyle {
   body,
   headline,
-  hero,
 }
 
 interface Props {
   children: ReactNode;
-  textStyle: XIVTextStyle;
+  textStyle?: XIVTextStyle;
 }
 
-export default function XIVUIText({
+export default function XIVText({
   children,
   textStyle = XIVTextStyle.body,
 }: Props) {
@@ -22,16 +21,19 @@ export default function XIVUIText({
       return (
         <p {...stylex.props([styles.text, textStyles.body])}>{children}</p>
       );
+      break;
     case XIVTextStyle.headline:
       return (
         <h1 {...stylex.props([styles.text, textStyles.headline])}>
           {children}
         </h1>
       );
-    case XIVTextStyle.hero:
+      break;
+    default:
       return (
-        <h1 {...stylex.props([styles.text, textStyles.hero])}>{children}</h1>
+        <p {...stylex.props([styles.text, textStyles.body])}>{children}</p>
       );
+      break;
   }
 }
 
@@ -46,9 +48,9 @@ const textStyles = stylex.create({
     fontSize: 14,
   },
   headline: {
-    fontSize: 18,
+    fontSize: 26,
   },
   hero: {
-    fontSize: 26,
+    fontSize: 42,
   },
 });

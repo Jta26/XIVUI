@@ -3,13 +3,14 @@ import * as stylex from "@stylexjs/stylex";
 
 interface Props {
   children: ReactNode;
+  xstyle?: stylex.StaticStyles;
 }
 
-export default function XIVUICard({ children }: Props) {
+export default function XIVUICard({ children, xstyle }: Props) {
   return (
     <div {...stylex.props(styles.outer)}>
       <div {...stylex.props(styles.inner)}>
-        <div {...stylex.props(styles.content)}></div>
+        <div {...stylex.props([styles.content, xstyle])}>{children}</div>
       </div>
     </div>
   );
@@ -17,8 +18,8 @@ export default function XIVUICard({ children }: Props) {
 
 const styles = stylex.create({
   outer: {
-    width: "calc(100% - 8px)",
-    height: "calc(100% - 8px)",
+    width: "100%",
+    height: "100%",
     boxShadow:
       "inset 0 1px 1px 0 #ded771, inset 0 0 1px 0 hsl(55deg 50% 60% / 5%), 0 0 1px 2px rgb(0 0 0 / 5%), 0 2px 2px 2px rgb(0 0 0 / 5%)",
     borderRadius: 10,
@@ -36,12 +37,15 @@ const styles = stylex.create({
     position: "relative",
     flexDirection: "column",
     overflow: "hidden",
-    backgroundImage: "linear-gradient(#636363,#313131 2rem)",
+    backgroundImage: "linear-gradient(#636363,#313131 1.5rem)",
 
     height: "100%",
     boxSizing: "border-box",
     boxShadow:
       "inset 0 0 0 1px hsl(0deg 0% 100% / 10%), 0 0 0 2px #222, 0 3px 1px #ded771, 0 0 2px 1px rgb(0 0 0 / 40%)",
   },
-  content: {},
+  content: {
+    marginInline: 10,
+    marginBlock: 5,
+  },
 });

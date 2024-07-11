@@ -1,1 +1,1 @@
-export {default} from './XIVUICard'
+export {default} from './XIVCard'
