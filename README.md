@@ -8,5 +8,6 @@ A library of React component styled after Final Fantasy XIV
 
 ## Components
 ---
-![image](https://github.com/Jta26/XIVUI/assets/24259636/883ac581-ce79-43b1-b9c4-fc109304f81c)
+![image](https://github.com/user-attachments/assets/102426bb-d670-4e0f-b5f4-c6d2726311c0)
+
 
