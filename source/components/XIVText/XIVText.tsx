@@ -10,28 +10,57 @@ export enum XIVTextStyle {
 interface Props {
   children: ReactNode;
   textStyle?: XIVTextStyle;
+  textAlign?: "left" | "center" | "right";
+  xstyle?: stylex.StaticStyles;
 }
 
 export default function XIVText({
   children,
   textStyle = XIVTextStyle.body,
+  textAlign = "left",
+  xstyle,
 }: Props) {
   switch (textStyle) {
     case XIVTextStyle.body:
       return (
-        <p {...stylex.props([styles.text, textStyles.body])}>{children}</p>
+        <p
+          {...stylex.props([
+            styles.text,
+            textStyles.body,
+            xstyle,
+            textAlignStyles[textAlign],
+          ])}
+        >
+          {children}
+        </p>
       );
       break;
     case XIVTextStyle.headline:
       return (
-        <h1 {...stylex.props([styles.text, textStyles.headline])}>
+        <h1
+          {...stylex.props([
+            styles.text,
+            textStyles.headline,
+            xstyle,
+            textAlignStyles[textAlign],
+          ])}
+        >
           {children}
         </h1>
       );
       break;
     default:
       return (
-        <p {...stylex.props([styles.text, textStyles.body])}>{children}</p>
+        <p
+          {...stylex.props([
+            styles.text,
+            textStyles.body,
+            xstyle,
+            textAlignStyles[textAlign],
+          ])}
+        >
+          {children}
+        </p>
       );
       break;
   }
@@ -52,5 +81,17 @@ const textStyles = stylex.create({
   },
   hero: {
     fontSize: 42,
+  },
+});
+
+const textAlignStyles = stylex.create({
+  left: {
+    textAlign: "left",
+  },
+  center: {
+    textAlign: "center",
+  },
+  right: {
+    textAlign: "right",
   },
 });

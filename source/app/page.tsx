@@ -6,6 +6,8 @@ import XIVText, { XIVTextStyle } from "../components/XIVText/XIVText";
 import XIVActionButton from "../components/XIVActionButton";
 import XIVTitleText from "../components/XIVTitleText";
 import Example from "./example";
+import XIVTooltip from "../components/XIVTooltip";
+import XIVCircleButton from "../components/XIVCircleButton";
 
 export default function Home() {
   return (
@@ -44,6 +46,14 @@ export default function Home() {
         <Example label="Action Button">
           <XIVActionButton />
           <XIVActionButton />
+        </Example>
+        <Example label="Circle Button">
+          <XIVCircleButton />
+        </Example>
+        <Example label="Tooltip">
+          <XIVTooltip label="Join Novice Network">
+            <XIVActionButton />
+          </XIVTooltip>
         </Example>
       </div>
     </main>

@@ -22,7 +22,9 @@ export default function XIVButton({ label, disabled, onClick, xstyle }: Props) {
       disabled={disabled}
       onClick={onClick}
     >
-      <XIVText textStyle={XIVTextStyle.body}>{label}</XIVText>
+      <XIVText textAlign="center" textStyle={XIVTextStyle.body}>
+        {label}
+      </XIVText>
     </button>
   );
 }
