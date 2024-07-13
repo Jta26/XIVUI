@@ -2,7 +2,7 @@ import React, { useCallback, useRef } from "react";
 
 import * as stylex from "@stylexjs/stylex";
 import XIVText from "../XIVText";
-import { XIVTextStyle } from "../XIVText/XIVText";
+import { XIVTextStyle } from "../XIVText";
 
 interface Props {
   children: React.ReactNode;

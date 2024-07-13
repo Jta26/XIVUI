@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 
 import * as stylex from "@stylexjs/stylex";
+import XIVText from "../components/XIVText";
+import { XIVTextStyle } from "../components/XIVText";
 
 interface Props {
   children: ReactNode[] | ReactNode;
@@ -12,7 +14,7 @@ export default function Example({ children, label }: Props) {
     <>
       <div {...stylex.props(styles.example)}>
         <div {...stylex.props(styles.label)}>
-          <h3>{label}</h3>
+          <XIVText textStyle={XIVTextStyle.headline}>{label}</XIVText>
         </div>
         <div {...stylex.props(styles.childContainer)}>
           {Array.isArray(children) ? (
@@ -30,8 +32,8 @@ export default function Example({ children, label }: Props) {
             <div {...stylex.props(styles.child)}>{children}</div>
           )}
         </div>
+        <div {...stylex.props(styles.divider)} />
       </div>
-      <div {...stylex.props(styles.divider)} />
     </>
   );
 }
@@ -39,7 +41,9 @@ export default function Example({ children, label }: Props) {
 const styles = stylex.create({
   example: {
     display: "flex",
+    flexDirection: "column",
     justifyItems: "flex-start",
+    marginInline: 20,
   },
   childContainer: {
     display: "flex",

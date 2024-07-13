@@ -4,13 +4,18 @@ import * as stylex from "@stylexjs/stylex";
 interface Props {
   children: ReactNode;
   xstyle?: stylex.StaticStyles;
+  contentXStyle?: stylex.StaticStyles;
 }
 
-export default function XIVUICard({ children, xstyle }: Props) {
+export default function XIVUICard({ children, xstyle, contentXStyle }: Props) {
   return (
-    <div {...stylex.props(styles.outer)}>
-      <div {...stylex.props(styles.inner)}>
-        <div {...stylex.props([styles.content, xstyle])}>{children}</div>
+    <div {...stylex.props(xstyle)}>
+      <div {...stylex.props(styles.outer)}>
+        <div {...stylex.props(styles.inner)}>
+          <div {...stylex.props([styles.content, contentXStyle])}>
+            {children}
+          </div>
+        </div>
       </div>
     </div>
   );

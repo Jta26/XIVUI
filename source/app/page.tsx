@@ -2,7 +2,7 @@
 import * as stylex from "@stylexjs/stylex";
 import XIVButton from "../components/XIVButton";
 import XIVCard from "../components/XIVCard";
-import XIVText, { XIVTextStyle } from "../components/XIVText/XIVText";
+import XIVText, { XIVTextStyle } from "../components/XIVText";
 import XIVActionButton from "../components/XIVActionButton";
 import XIVTitleText from "../components/XIVTitleText";
 import Example from "./example";
@@ -12,7 +12,7 @@ import XIVCircleButton from "../components/XIVCircleButton";
 export default function Home() {
   return (
     <main {...stylex.props(styles.main)}>
-      <div {...stylex.props(styles.container)}>
+      <XIVCard xstyle={styles.container}>
         <div {...stylex.props(styles.title)}>
           <XIVTitleText> XIVUI</XIVTitleText>
         </div>
@@ -30,7 +30,7 @@ export default function Home() {
         </Example>
 
         <Example label="Card">
-          <XIVCard xstyle={cardStyles.card}>
+          <XIVCard contentXStyle={cardStyles.card}>
             <div {...stylex.props(cardStyles.cardContent)}>
               <XIVTitleText>Character Name</XIVTitleText>
               <div {...stylex.props(cardStyles.buttonRow)}>
@@ -55,7 +55,7 @@ export default function Home() {
             <XIVActionButton />
           </XIVTooltip>
         </Example>
-      </div>
+      </XIVCard>
     </main>
   );
 }
@@ -65,14 +65,16 @@ const styles = stylex.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    margin: "auto",
+    marginBlockStart: 50,
   },
   container: {
     width: "80%",
-    minWidth: 400,
-    backgroundColor: "#313131",
+    minWidth: 700,
     display: "flex",
-    padding: 20,
     flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   example: {
     marginBlockStart: 100,
@@ -89,8 +91,8 @@ const styles = stylex.create({
 
 const cardStyles = stylex.create({
   card: {
-    minHeight: 600,
     maxWidth: "100%",
+    height: 400,
   },
   cardContent: {
     display: "flex",

@@ -69,6 +69,7 @@ export default function XIVText({
 const styles = stylex.create({
   text: {
     fontFamily: "meiryo",
+    color: "white",
   },
 });
 
