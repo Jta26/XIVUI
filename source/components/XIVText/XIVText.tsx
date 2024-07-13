@@ -78,7 +78,11 @@ const textStyles = stylex.create({
     fontSize: 14,
   },
   headline: {
-    fontSize: 26,
+    fontSize: 40,
+    fontFamily: "TrumpGothicPro",
+    color: "#CCCCCC",
+    letterSpacing: 2,
+    textShadow: "1px 1px 1px rgba(0,0,0,1)",
   },
   hero: {
     fontSize: 42,

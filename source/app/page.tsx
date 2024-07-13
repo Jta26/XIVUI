@@ -22,7 +22,7 @@ export default function Home() {
           <XIVButton label="Close" disabled={false} onClick={() => {}} />
         </Example>
         <Example label="Text">
-          <XIVText textStyle={XIVTextStyle.headline}>Headline Text</XIVText>
+          <XIVText textStyle={XIVTextStyle.headline}>Character</XIVText>
           <XIVText textStyle={XIVTextStyle.body}>Body Text</XIVText>
         </Example>
         <Example label="Title Text">
@@ -32,7 +32,7 @@ export default function Home() {
         <Example label="Card">
           <XIVCard contentXStyle={cardStyles.card}>
             <div {...stylex.props(cardStyles.cardContent)}>
-              <XIVTitleText>Character Name</XIVTitleText>
+              <XIVText textStyle={XIVTextStyle.headline}>Character</XIVText>
               <div {...stylex.props(cardStyles.buttonRow)}>
                 <XIVButton label="Default" />
                 <div {...stylex.props(cardStyles.last)}>

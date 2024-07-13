@@ -120,6 +120,12 @@ a {
   src: url('/fonts/jupiter_pro_regular.otf')
 }
 
+@font-face {
+  font-family: 'TrumpGothicPro';
+  src: url('/fonts/TrumpGothicPro.ttf')
+
+}
+
 * {
   font-family: 'meiryo'
 }
