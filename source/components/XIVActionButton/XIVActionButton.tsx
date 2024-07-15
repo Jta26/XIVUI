@@ -7,9 +7,6 @@ interface Props {
   item?: ReactNode;
 }
 
-// need to add glow effect when you click
-// circle glow grows from center and is interrupted when you unclick
-
 export default function XIVActionButton({ disabled, item }: Props) {
   const [isMouseDown, setIsMouseDown] = React.useState(false);
   const onMouseDown = useCallback<MouseEventHandler<HTMLDivElement>>(
@@ -42,6 +39,7 @@ export default function XIVActionButton({ disabled, item }: Props) {
   );
 }
 
+// This should be a circle that expands and quickly becomes opaque and not a shadow
 const mouseDownGlow = stylex.keyframes({
   "0%": {
     opacity: 1,

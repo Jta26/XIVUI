@@ -21,6 +21,7 @@ export default function XIVUICard({ children, xstyle, contentXStyle }: Props) {
   );
 }
 
+// Card also has a background texture that we might need to rip from the game files
 const styles = stylex.create({
   outer: {
     width: "100%",
