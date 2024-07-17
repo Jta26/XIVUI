@@ -1,13 +1,15 @@
 "use client";
+
 import * as stylex from "@stylexjs/stylex";
-import XIVButton from "../components/XIVButton";
-import XIVCard from "../components/XIVCard";
-import XIVText, { XIVTextStyle } from "../components/XIVText";
-import XIVActionButton from "../components/XIVActionButton";
-import XIVTitleText from "../components/XIVTitleText";
+import { XIVButton } from "xivui";
+import { XIVCard } from "xivui";
+import { XIVText } from "xivui";
+import { XIVTextStyle } from "xivui";
+import { XIVActionButton } from "xivui";
+import { XIVTitleText } from "xivui";
 import Example from "./example";
-import XIVTooltip from "../components/XIVTooltip";
-import XIVCircleButton from "../components/XIVCircleButton";
+import { XIVTooltip } from "xivui";
+import { XIVCircleButton } from "xivui";
 
 export default function Home() {
   return (

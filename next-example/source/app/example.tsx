@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 
 import * as stylex from "@stylexjs/stylex";
-import XIVText from "../components/XIVText";
-import { XIVTextStyle } from "../components/XIVText";
+import { XIVText } from "xivui";
+import { XIVTextStyle } from "xivui";
 
 interface Props {
   children: ReactNode[] | ReactNode;
