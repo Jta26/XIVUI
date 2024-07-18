@@ -43,7 +43,7 @@ const styles = stylex.create({
     position: "relative",
     flexDirection: "column",
     overflow: "hidden",
-    backgroundImage: "linear-gradient(#636363,#313131 1.5rem)",
+    backgroundImage: "linear-gradient(#636363,#3c3c3c 1.5rem)",
 
     height: "100%",
     boxSizing: "border-box",

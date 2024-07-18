@@ -6,6 +6,9 @@ import XIVCircleButton from './source/XIVCircleButton';
 import XIVTooltip from './source/XIVTooltip';
 import XIVActionButton from './source/XIVActionButton';
 import XIVTitleText from './source/XIVTitleText';
+import { XIVTextColor } from './source/XIVText/XIVText';
+import { XIVMenu } from './source/XIVMenu';
+import { XIVMenuItem } from './source/XIVMenuItem';
 
 
 export {
@@ -16,5 +19,8 @@ export {
     XIVCircleButton,
     XIVTooltip,
     XIVActionButton,
-    XIVTitleText
+    XIVTitleText,
+    XIVTextColor,
+    XIVMenu,
+    XIVMenuItem
 }

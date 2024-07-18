@@ -10,6 +10,9 @@ import { XIVTitleText } from "xivui";
 import Example from "./example";
 import { XIVTooltip } from "xivui";
 import { XIVCircleButton } from "xivui";
+import { XIVTextColor } from "xivui";
+import { XIVMenu } from "xivui";
+import { XIVMenuItem } from "xivui";
 
 export default function Home() {
   return (
@@ -30,11 +33,15 @@ export default function Home() {
         <Example label="Title Text">
           <XIVTitleText>Black Mage</XIVTitleText>
         </Example>
-
         <Example label="Card">
           <XIVCard contentXStyle={cardStyles.card}>
             <div {...stylex.props(cardStyles.cardContent)}>
-              <XIVText textStyle={XIVTextStyle.headline}>Character</XIVText>
+              <XIVText
+                textStyle={XIVTextStyle.headline}
+                textColor={XIVTextColor.headline}
+              >
+                Character
+              </XIVText>
               <div {...stylex.props(cardStyles.buttonRow)}>
                 <XIVButton label="Default" />
                 <div {...stylex.props(cardStyles.last)}>
@@ -56,6 +63,16 @@ export default function Home() {
           <XIVTooltip label="Join Novice Network">
             <XIVActionButton />
           </XIVTooltip>
+        </Example>
+        <Example label="Menu">
+          <XIVMenu>
+            <XIVMenuItem label="Edit Portrait" />
+            <XIVMenuItem label="Edit Plate Design" />
+            <XIVMenuItem label="Edit Profile" />
+            <XIVMenuItem label="Edit Search Comment" />
+            <XIVMenuItem label="Privacy Settings" />
+            <XIVMenuItem label="Help" />
+          </XIVMenu>
         </Example>
       </XIVCard>
     </main>
