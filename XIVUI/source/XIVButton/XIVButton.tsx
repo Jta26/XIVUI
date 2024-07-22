@@ -10,7 +10,17 @@ interface Props {
   xstyle?: stylex.StaticStyles;
 }
 
-export default function XIVButton({ label, disabled, onClick, xstyle }: Props) {
+/*
+TODO:
+1. Add sound effect on press. This should be done with a useSound hook 
+  or something so that we can reuse for other components with interaction sounds.
+*/
+export default function XIVButton({
+  label,
+  disabled,
+  onClick,
+  xstyle,
+}: Props) {
   return (
     <button
       {...stylex.props([

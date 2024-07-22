@@ -11,7 +11,10 @@ interface Props {
 export default function XIVMenuItem({ label }: Props) {
   return (
     <div {...stylex.props(styles.container)}>
-      <XIVText textStyle={XIVTextStyle.menu} textColor={XIVTextColor.accent}>
+      <XIVText
+        textStyle={XIVTextStyle.menu}
+        textColor={XIVTextColor.accent}
+      >
         {label}
       </XIVText>
     </div>
