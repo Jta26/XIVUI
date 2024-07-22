@@ -1,35 +1,26 @@
-import react from "react";
+import react, { useContext } from "react";
 import * as stylex from "@stylexjs/stylex";
+import { XIVHoverRendererContext } from "../shared/XIVHoverRenderer";
 
 import XIVText, { XIVTextStyle } from "../XIVText";
 
-interface Props {
-  children: react.ReactNode;
-  isHovered: boolean;
-  ref: React.RefObject<HTMLDivElement>;
+export interface Props {
+  label: string;
 }
 
 // This is where the tooltip content gets rendered.
 // XIVTooltip.tsx is the API that is used to render tooltips
-export default function XIVTooltipImpl({
-  children,
-  isHovered,
-  ref,
-}: Props) {
+export default function XIVTooltipImpl({ label }: Props) {
+  const { isHovered } = useContext(XIVHoverRendererContext);
+
   return (
-    <div
-      {...stylex.props([
-        styles.tooltipContainer,
-        isHovered && styles.showTooltip,
-      ])}
-      ref={ref}
-    >
+    <div {...stylex.props([styles.tooltipContainer])}>
       <XIVText
-        xstyle={styles.tooltipText}
         textAlign="center"
         textStyle={XIVTextStyle.body}
+        xstyle={styles.tooltipText}
       >
-        {children}
+        {label}
       </XIVText>
     </div>
   );
@@ -37,16 +28,15 @@ export default function XIVTooltipImpl({
 
 const styles = stylex.create({
   tooltipContainer: {
-    backgroundColor: "rbga(0,0,0, 1)",
-    border: "1px solid black",
+    // border: "1px solid black",
     position: "absolute",
-    visibility: "hidden",
-    width: 250,
-  },
-  showTooltip: {
-    visibility: "shown",
+    backgroundColor: "rgba(0,0,0,.15)",
+    boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.15)",
+    borderRadius: 10,
+    paddingInline: 10,
   },
   tooltipText: {
-    textAlign: "center",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
   },
 });

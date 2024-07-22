@@ -1,7 +1,8 @@
 import React, { useCallback, useRef } from "react";
 
 import * as stylex from "@stylexjs/stylex";
-import { XIVHoverRenderer } from "../shared/HoverRenderer";
+import { XIVHoverRenderer } from "../shared/XIVHoverRenderer";
+import XIVTooltipImpl from "./XIVTooltipImpl";
 
 interface Props {
   children: React.ReactNode;
@@ -14,13 +15,15 @@ export default function XIVTooltip({
   label,
   xstyle,
 }: Props) {
-  const hoverRef = React.useRef<HTMLDivElement>(null);
-  const tooltipRef = React.useRef<HTMLDivElement>(null);
-
   return (
     <div {...stylex.props(styles.container)}>
-      <XIVHoverRenderer>
-        <div ref={hoverRef}>{children}</div>
+      <XIVHoverRenderer
+        hoverItemProps={{ label }}
+        hoverItem={XIVTooltipImpl}
+      >
+        {({ isHovered, hoverRef }) => {
+          return children;
+        }}
       </XIVHoverRenderer>
     </div>
   );

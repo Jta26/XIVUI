@@ -22,13 +22,29 @@ export default function Home() {
           <XIVTitleText> XIVUI</XIVTitleText>
         </div>
         <Example label="Button">
-          <XIVButton label="Default" disabled={false} onClick={() => {}} />
-          <XIVButton label="Apply" disabled={true} onClick={() => {}} />
-          <XIVButton label="Close" disabled={false} onClick={() => {}} />
+          <XIVButton
+            label="Default"
+            disabled={false}
+            onClick={() => {}}
+          />
+          <XIVButton
+            label="Apply"
+            disabled={true}
+            onClick={() => {}}
+          />
+          <XIVButton
+            label="Close"
+            disabled={false}
+            onClick={() => {}}
+          />
         </Example>
         <Example label="Text">
-          <XIVText textStyle={XIVTextStyle.headline}>Character</XIVText>
-          <XIVText textStyle={XIVTextStyle.body}>Body Text</XIVText>
+          <XIVText textStyle={XIVTextStyle.headline}>
+            Character
+          </XIVText>
+          <XIVText textStyle={XIVTextStyle.body}>
+            Body Text
+          </XIVText>
         </Example>
         <Example label="Title Text">
           <XIVTitleText>Black Mage</XIVTitleText>
@@ -45,7 +61,10 @@ export default function Home() {
               <div {...stylex.props(cardStyles.buttonRow)}>
                 <XIVButton label="Default" />
                 <div {...stylex.props(cardStyles.last)}>
-                  <XIVButton xstyle={cardStyles.button} label="Apply" />
+                  <XIVButton
+                    xstyle={cardStyles.button}
+                    label="Apply"
+                  />
                   <XIVButton label="Close" />
                 </div>
               </div>
@@ -62,6 +81,9 @@ export default function Home() {
         <Example label="Tooltip">
           <XIVTooltip label="Join Novice Network">
             <XIVActionButton />
+          </XIVTooltip>
+          <XIVTooltip label="Or Don't">
+            <XIVButton label="Press Me" />
           </XIVTooltip>
         </Example>
         <Example label="Menu">
