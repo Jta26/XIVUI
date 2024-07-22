@@ -21,6 +21,8 @@ export default function XIVMenu({ children }: Props) {
 
 const styles = stylex.create({
   container: {
+    display: "flex",
+    flexDirection: "column",
     margin: 5,
     minWidth: 200,
   },
