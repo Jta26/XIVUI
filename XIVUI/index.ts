@@ -9,6 +9,7 @@ import XIVTitleText from './source/XIVTitleText';
 import { XIVTextColor } from './source/XIVText/XIVText';
 import { XIVMenu } from './source/XIVMenu';
 import { XIVMenuItem } from './source/XIVMenuItem';
+import {XIVAction} from './source/shared/XIVAction';
 
 
 export {
@@ -22,5 +23,6 @@ export {
     XIVTitleText,
     XIVTextColor,
     XIVMenu,
-    XIVMenuItem
+    XIVMenuItem,
+    XIVAction
 }

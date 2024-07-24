@@ -14,7 +14,9 @@ export default function Example({ children, label }: Props) {
     <>
       <div {...stylex.props(styles.example)}>
         <div {...stylex.props(styles.label)}>
-          <XIVText textStyle={XIVTextStyle.headline}>{label}</XIVText>
+          <XIVText textStyle={XIVTextStyle.headline}>
+            {label}
+          </XIVText>
         </div>
         <div {...stylex.props(styles.childContainer)}>
           {Array.isArray(children) ? (

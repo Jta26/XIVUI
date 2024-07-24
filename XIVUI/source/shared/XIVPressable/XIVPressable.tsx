@@ -10,6 +10,8 @@ interface Props {
   xstyle?: stylex.StaticStyles;
 }
 
+// TODO
+// 1. links
 export default function XIVPressable({
   children,
   onHoverStart,

@@ -13,6 +13,7 @@ import { XIVCircleButton } from "xivui";
 import { XIVTextColor } from "xivui";
 import { XIVMenu } from "xivui";
 import { XIVMenuItem } from "xivui";
+import { XIVAction } from "xivui";
 
 export default function Home() {
   return (
@@ -72,15 +73,15 @@ export default function Home() {
           </XIVCard>
         </Example>
         <Example label="Action Button">
-          <XIVActionButton />
-          <XIVActionButton />
+          <XIVActionButton action={XIVAction.ten} />
+          <XIVActionButton action={XIVAction.chi} />
         </Example>
         <Example label="Circle Button">
           <XIVCircleButton />
         </Example>
         <Example label="Tooltip">
           <XIVTooltip label="Join Novice Network">
-            <XIVActionButton />
+            <XIVActionButton action={XIVAction.jin} />
           </XIVTooltip>
           <XIVTooltip label="Or Don't">
             <XIVButton label="Press Me" />
