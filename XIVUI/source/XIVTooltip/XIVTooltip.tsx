@@ -16,34 +16,13 @@ export default function XIVTooltip({
   xstyle,
 }: Props) {
   return (
-    <div {...stylex.props(styles.container)}>
-      <XIVHoverRenderer
-        hoverItemProps={{ label }}
-        hoverItem={XIVTooltipImpl}
-      >
-        {({ isHovered, hoverRef }) => {
-          return children;
-        }}
-      </XIVHoverRenderer>
-    </div>
+    <XIVHoverRenderer
+      hoverItemProps={{ label }}
+      hoverItem={XIVTooltipImpl}
+    >
+      {({ isHovered, hoverRef }) => {
+        return children;
+      }}
+    </XIVHoverRenderer>
   );
 }
-
-const styles = stylex.create({
-  container: {
-    position: "relative",
-  },
-  tooltipContainer: {
-    backgroundColor: "rbga(0,0,0, 1)",
-    border: "1px solid black",
-    position: "absolute",
-    visibility: "hidden",
-    width: 250,
-  },
-  showTooltip: {
-    visibility: "shown",
-  },
-  tooltipText: {
-    textAlign: "center",
-  },
-});

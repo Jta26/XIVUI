@@ -29,11 +29,11 @@ export default function XIVTooltipImpl({ label }: Props) {
 const styles = stylex.create({
   tooltipContainer: {
     // border: "1px solid black",
-    position: "absolute",
     backgroundColor: "rgba(0,0,0,.15)",
     boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.15)",
     borderRadius: 10,
     paddingInline: 10,
+    maxWidth: 250,
   },
   tooltipText: {
     whiteSpace: "nowrap",

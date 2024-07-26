@@ -32,7 +32,10 @@ export default function XIVHoverRenderer<
 }: Props<THoverable>) {
   const hoverRef = useRef<HTMLDivElement>(null);
   const renderedHoverRef = useRef<HTMLDivElement>(null);
-  const [isHovered] = useHoverable(hoverRef, renderedHoverRef);
+  const [isHovered, dynamicHoverStyles] = useHoverable(
+    hoverRef,
+    renderedHoverRef
+  );
 
   const contextValue = useMemo(() => {
     return {
@@ -42,12 +45,31 @@ export default function XIVHoverRenderer<
 
   return (
     <XIVHoverRendererContext.Provider value={contextValue}>
-      <div ref={hoverRef}>
-        {children({ isHovered, hoverRef })}
-      </div>
-      <div ref={renderedHoverRef}>
-        {isHovered && <HoverItem {...hoverItemProps} />}
+      <div {...stylex.props(styles.hoverContainer)}>
+        {isHovered && (
+          <div
+            {...stylex.props([
+              styles.defaultHover,
+              dynamicHoverStyles,
+            ])}
+            ref={renderedHoverRef}
+          >
+            <HoverItem {...hoverItemProps} />
+          </div>
+        )}
+        <div ref={hoverRef}>
+          {children({ isHovered, hoverRef })}
+        </div>
       </div>
     </XIVHoverRendererContext.Provider>
   );
 }
+
+const styles = stylex.create({
+  defaultHover: {
+    position: "absolute",
+  },
+  hoverContainer: {
+    position: "relative",
+  },
+});
