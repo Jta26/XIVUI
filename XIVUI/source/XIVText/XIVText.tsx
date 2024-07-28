@@ -120,7 +120,7 @@ const styles = stylex.create({
 
 const textStyles = stylex.create({
   body: {
-    fontSize: 14,
+    fontSize: 16,
   },
   headline: {
     fontSize: 40,

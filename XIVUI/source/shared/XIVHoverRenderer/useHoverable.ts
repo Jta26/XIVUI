@@ -2,6 +2,8 @@ import react, { useEffect, useRef, useState } from "react";
 
 import * as stylex from "@stylexjs/stylex";
 
+// TODO
+// 1. handle contextual layering (ensure hovers are always on top)
 export default function useHoverable(
   hoverRef: React.RefObject<HTMLElement>,
   renderedHoverRef: React.RefObject<HTMLElement>
@@ -53,7 +55,7 @@ export default function useHoverable(
         setHoverPosition(hoverPos);
       }
     }
-  }, [isHovered]);
+  }, [isHovered, hoverRef, renderedHoverRef]);
 
   if (hoverPosition != null) {
     return [
@@ -80,10 +82,7 @@ function getHoverPosition(
   const renderRect = renderElement.getBoundingClientRect();
 
   const hoverMidpoint = hoverRect.width / 2;
-
   const renderMidpoint = renderRect.width / 2;
-
-  console.log(renderMidpoint, hoverMidpoint);
 
   const hoverX = hoverMidpoint - renderMidpoint;
   const hoverY = -hoverRect.height;

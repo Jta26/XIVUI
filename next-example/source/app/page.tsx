@@ -90,7 +90,9 @@ export default function Home() {
         <Example label="Menu">
           <XIVMenu>
             <XIVMenuItem label="Edit Portrait" />
-            <XIVMenuItem label="Edit Plate Design" />
+            <XIVTooltip label="The Giving Land">
+              <XIVMenuItem label="Edit Plate Design" />
+            </XIVTooltip>
             <XIVMenuItem label="Edit Profile" />
             <XIVMenuItem label="Edit Search Comment" />
             <XIVMenuItem label="Privacy Settings" />

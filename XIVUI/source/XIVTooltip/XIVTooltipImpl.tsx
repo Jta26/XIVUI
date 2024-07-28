@@ -29,8 +29,8 @@ export default function XIVTooltipImpl({ label }: Props) {
 const styles = stylex.create({
   tooltipContainer: {
     // border: "1px solid black",
-    backgroundColor: "rgba(0,0,0,.15)",
-    boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.15)",
+    backgroundColor: "rgba(0,0,0,.35)",
+    boxShadow: "0px 0px 2px 2px rgba(0,0,0,0.35)",
     borderRadius: 10,
     paddingInline: 10,
     maxWidth: 250,
