@@ -131,3 +131,6 @@ dist
 
 # stylex cli generated folder
 src/
+
+# rollup build
+./XIVUI/.build/
