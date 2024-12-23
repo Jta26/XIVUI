@@ -4,17 +4,29 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
   },
   "author": "Joel Austin",
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@stylexjs/eslint-plugin": "^0.9.3",
+    "@stylexjs/rollup-plugin": "^0.9.3",
+    "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
+    "rollup": "^4.29.1",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
     "@stylexjs/stylex": "^0.9.3",
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

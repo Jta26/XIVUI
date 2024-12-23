@@ -22,14 +22,14 @@ export default function XIVActionIcon({ action }: Props) {
 }
 
 const styles = stylex.create({
-  action: {
-    width: 40,
-    height: 40,
-  },
   background: (url: string) => ({
     backgroundImage: `url(${url})`,
     objectFit: "cover",
     backgroundPosition: "center",
     backgroundSize: "100%",
   }),
+  action: {
+    width: 40,
+    height: 40,
+  },
 });
