@@ -133,4 +133,4 @@ dist
 src/
 
 # rollup build
-./XIVUI/.build/
+.build
