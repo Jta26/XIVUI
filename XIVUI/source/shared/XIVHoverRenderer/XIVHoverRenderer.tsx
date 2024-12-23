@@ -14,7 +14,7 @@ import XIVHoverRendererContext from "./XIVHoverRendererContext";
 
 interface ChildrenArgs {
   isHovered: boolean;
-  hoverRef: React.RefObject<HTMLElement>;
+  hoverRef: React.RefObject<HTMLElement | null>;
 }
 
 interface Props<THoverable extends React.ElementType> {
@@ -31,7 +31,7 @@ export default function XIVHoverRenderer<
   hoverItemProps,
 }: Props<THoverable>) {
   const hoverRef = useRef<HTMLDivElement>(null);
-  const renderedHoverRef = useRef<HTMLDivElement>(null);
+  const renderedHoverRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, dynamicHoverStyles] = useHoverable(
     hoverRef,
     renderedHoverRef

@@ -5,8 +5,8 @@ import * as stylex from "@stylexjs/stylex";
 // TODO
 // 1. handle contextual layering (ensure hovers are always on top)
 export default function useHoverable(
-  hoverRef: React.RefObject<HTMLElement>,
-  renderedHoverRef: React.RefObject<HTMLElement>
+  hoverRef: React.RefObject<HTMLElement | null>,
+  renderedHoverRef: React.RefObject<HTMLElement | null>
 ): [boolean, stylex.StyleXStyles | null] {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [hoverPosition, setHoverPosition] = useState<{
@@ -68,8 +68,8 @@ export default function useHoverable(
 }
 
 function getHoverPosition(
-  hoverRef: React.RefObject<HTMLElement>,
-  renderedHoverRef: React.RefObject<HTMLElement>
+  hoverRef: React.RefObject<HTMLElement | null>,
+  renderedHoverRef: React.RefObject<HTMLElement | null>
 ): { x: number; y: number } | null {
   const hoverElement = hoverRef.current;
   const renderElement = renderedHoverRef.current;

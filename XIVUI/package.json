@@ -2,11 +2,19 @@
   "name": "xivui",
   "version": "1.0.0",
   "main": "index.ts",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joel Austin",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@stylexjs/stylex": "^0.9.3",
+    "react": "^19.0.0"
+  }
 }
