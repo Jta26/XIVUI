@@ -58,7 +58,7 @@ export default function XIVHoverRenderer<
           </div>
         )}
         <div ref={hoverRef}>
-          {/* {children({ isHovered, hoverRef })} */}
+          {children({ isHovered, hoverRef })}
         </div>
       </div>
     </XIVHoverRendererContext.Provider>
