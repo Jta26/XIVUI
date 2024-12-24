@@ -31,14 +31,6 @@ export default function XIVActionButton({
     },
     [setIsMouseDown]
   );
-  const onMouseUp = useCallback<
-    MouseEventHandler<HTMLDivElement>
-  >(
-    (event) => {
-      setIsMouseDown(false);
-    },
-    [setIsMouseDown]
-  );
   const onAnimationEnd = useCallback(() => {
     setIsMouseDown(false);
   }, [setIsMouseDown]);
@@ -46,7 +38,6 @@ export default function XIVActionButton({
   return (
     <div
       onMouseDown={onMouseDown}
-      onMouseUp={onMouseUp}
       onAnimationEnd={onAnimationEnd}
       {...stylex.props([
         styles.container,
@@ -72,8 +63,8 @@ const mouseDownGlow = stylex.keyframes({
     boxShadow: "0 0 2px 4px #E8E8DF",
   },
   "100%": {
-    opacity: ".25",
-    boxShadow: "0 0 20px 20px #E8E8DF",
+    opacity: "0",
+    boxShadow: "0 0 15px 15px #E8E8DF",
   },
 });
 
@@ -120,7 +111,7 @@ const styles = stylex.create({
   mouseDownGlow: {
     "::after": {
       animationName: mouseDownGlow,
-      animationDuration: ".5s",
+      animationDuration: "250ms",
       content: "",
       position: "absolute",
       top: "calc(50% - 3px)",

@@ -7,7 +7,7 @@ interface Props {
   contentXStyle?: stylex.StaticStyles;
 }
 
-export default function XIVUICard({
+export default function XIVCard({
   children,
   xstyle,
   contentXStyle,
