@@ -1,4 +1,4 @@
-import react, { useContext } from "react";
+import React, { useContext } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { XIVHoverRendererContext } from "../shared/XIVHoverRenderer";
 

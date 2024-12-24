@@ -14,7 +14,7 @@
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
-    "xivui": "file:../XIVUI/.build/"
+    "xivui": "file:../XIVUI"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.24.7",

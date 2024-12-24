@@ -6,15 +6,24 @@ import stylexPlugin from '@stylexjs/rollup-plugin';
 
 const config = {
   input: './index.ts',
-  output: {
-    file: './.build/bundle.js',
-    format: 'es',
-  },
+  output: [
+    {
+      file: '.build/bundle.cjs.js',
+      format: 'cjs',
+      sourcemap: true,
+    },
+    {
+      file: '.build/bundle.esm.js',
+      format: 'esm',
+      sourcemap: true,
+    },
+  ],
   plugins: [
     resolve({ extensions: ['.js', '.ts', '.tsx'] }),
     commonjs(),
     stylexPlugin({
       fileName: 'stylex.css',
+      dev: true
     }),
     babel({
       babelHelpers: 'bundled',
@@ -24,7 +33,8 @@ const config = {
         '@babel/preset-react'
       ]
     }),
-  ]
+  ],
+  external: ['react', 'react-dom']
 };
 
 export default config;

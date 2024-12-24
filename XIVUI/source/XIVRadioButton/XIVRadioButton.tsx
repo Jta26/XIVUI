@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 import * as stylex from "@stylexjs/stylex";
 

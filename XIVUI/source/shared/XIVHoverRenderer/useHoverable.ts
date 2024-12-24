@@ -1,4 +1,4 @@
-import react, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import * as stylex from "@stylexjs/stylex";
 

@@ -1,10 +1,10 @@
-import react from "react";
+import React, { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import XIVCard from "../XIVCard";
 import { XIVMenuItem } from "../XIVMenuItem";
 
 interface Props {
-  children: react.ReactNode;
+  children: ReactNode;
 }
 
 // TODO

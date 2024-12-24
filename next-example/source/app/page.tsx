@@ -51,7 +51,7 @@ export default function Home() {
           <XIVTitleText>Black Mage</XIVTitleText>
         </Example>
         <Example label="Card">
-          <XIVCard contentXStyle={cardStyles.card}>
+          <XIVCard>
             <div {...stylex.props(cardStyles.cardContent)}>
               <XIVText
                 textStyle={XIVTextStyle.headline}

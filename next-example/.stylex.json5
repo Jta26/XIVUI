@@ -5,6 +5,4 @@
   babelPresets: [
     ["@babel/preset-typescript", { allExtensions: true, isTSX: true }],
   ],
-  modules_EXPERIMENTAL: [["xivui", { ignore: ["tsconfig.json"] }]],
-  watch: true,
 }

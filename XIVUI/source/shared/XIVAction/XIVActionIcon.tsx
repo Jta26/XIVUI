@@ -1,4 +1,4 @@
-import react, { useMemo } from "react";
+import React, { useMemo } from "react";
 import * as stylex from "@stylexjs/stylex";
 
 import { XIVAction } from "./XIVAction";
@@ -13,7 +13,6 @@ interface Props {
 
 export default function XIVActionIcon({ action }: Props) {
   const url = useMemo(() => formatActionUrl(action), [action]);
-  console.log(url);
   return (
     <div
       {...stylex.props(styles.action, styles.background(url))}

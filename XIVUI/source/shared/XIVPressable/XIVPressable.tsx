@@ -1,8 +1,8 @@
-import react, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 
 interface Props {
-  children: react.ReactNode;
+  children: ReactNode;
   onHoverStart?: () => void;
   onHoverEnd?: () => void;
   onPress?: MouseEventHandler<HTMLElement>;

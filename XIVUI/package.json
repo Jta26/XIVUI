@@ -1,7 +1,8 @@
 {
   "name": "xivui",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": ".build/bundle.cjs.js",
+  "module": ".build/bundle.esm.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,9 +25,11 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.7.2"
   },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "dependencies": {
-    "@stylexjs/stylex": "^0.9.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@stylexjs/stylex": "^0.9.3"
   }
 }
